@@ -13,7 +13,14 @@
                 placeholder="Password" required ngModel>
                 
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+                
+                <div class="alert alert-danger" role="alert" *ngIf="isFormInValid">
+                    Please fill all fields
+                </div>
+
+                <div class="alert alert-danger" role="alert" *ngIf="areCredentialsInvalid">
+                    Invalid User or Password
+                </div>
             </form>
         </div>
     </div>
